@@ -30,7 +30,7 @@ struct ProviderSmall: IntentTimelineProvider {
         if index == 0 {
             index = 1
         }
-        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .atEnd)
+        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .never)
         completion(timeline)
     }
 }
@@ -57,7 +57,7 @@ struct ProviderMedium: IntentTimelineProvider {
         if index == 0 {
             index = 1
         }
-        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .atEnd)
+        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .never)
         completion(timeline)
     }
 }
@@ -84,7 +84,7 @@ struct ProviderLarge: IntentTimelineProvider {
         if index == 0 {
             index = 1
         }
-        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .atEnd)
+        let timeline = Timeline(entries: [EmptySpaceEntry(position: positions[index - 1])], policy: .never)
         completion(timeline)
     }
 }
