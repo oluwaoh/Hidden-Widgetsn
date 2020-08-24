@@ -85,7 +85,8 @@ class ImageCropper {
     
     private func storePNG(image: UIImage, filename: String) {
         let fileManager = FileManager.default
-        guard let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.aryanchaubal.homescreenspaces") else { return }
+        guard let bundleId = Bundle.main.bundleIdentifier else { return }
+        guard let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.\(bundleId)") else { return }
         guard let imageData = image.pngData() else { return }
         let filePathURL = url.appendingPathComponent("\(filename).png")
         print(filePathURL)
