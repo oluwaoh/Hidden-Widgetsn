@@ -14,7 +14,7 @@ struct ProviderSmall: IntentTimelineProvider {
     typealias Entry = EmptySpaceEntry
     typealias Intent = PositionSmallIntent
     
-    func snapshot(for configuration: PositionSmallIntent, with context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
+    func getSnapshot(for configuration: PositionSmallIntent, in context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
         let entry = EmptySpaceEntry(date: Date(), position: "topLeftSmall")
         completion(entry)
     }
@@ -24,7 +24,7 @@ struct ProviderSmall: IntentTimelineProvider {
         return entry
     }
     
-    func timeline(for configuration: PositionSmallIntent, with context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
+    func getTimeline(for configuration: PositionSmallIntent, in context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
         let positions = ["topLeftSmall", "topRightSmall", "midLeftSmall", "midRightSmall", "bottomLeftSmall", "bottomRightSmall"]
         var index = configuration.position.rawValue
         if index == 0 {
@@ -41,7 +41,7 @@ struct ProviderMedium: IntentTimelineProvider {
     typealias Entry = EmptySpaceEntry
     typealias Intent = PositionMediumIntent
     
-    func snapshot(for configuration: PositionMediumIntent, with context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
+    func getSnapshot(for configuration: PositionMediumIntent, in context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
         let entry = EmptySpaceEntry(date: Date(), position: "topMedium")
         completion(entry)
     }
@@ -51,7 +51,7 @@ struct ProviderMedium: IntentTimelineProvider {
         return entry
     }
     
-    func timeline(for configuration: PositionMediumIntent, with context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
+    func getTimeline(for configuration: PositionMediumIntent, in context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
         let positions = ["topMedium", "midMedium", "bottomMedium"]
         var index = configuration.position.rawValue
         if index == 0 {
@@ -68,7 +68,7 @@ struct ProviderLarge: IntentTimelineProvider {
     typealias Entry = EmptySpaceEntry
     typealias Intent = PositionLargeIntent
     
-    func snapshot(for configuration: PositionLargeIntent, with context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
+    func getSnapshot(for configuration: PositionLargeIntent, in context: Context, completion: @escaping (EmptySpaceEntry) -> ()) {
         let entry = EmptySpaceEntry(date: Date(), position: "topLarge")
         completion(entry)
     }
@@ -78,7 +78,7 @@ struct ProviderLarge: IntentTimelineProvider {
         return entry
     }
     
-    func timeline(for configuration: PositionLargeIntent, with context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
+    func getTimeline(for configuration: PositionLargeIntent, in context: Context, completion: @escaping (Timeline<EmptySpaceEntry>) -> ()) {
         let positions = ["topLarge", "bottomLarge"]
         var index = configuration.position.rawValue
         if index == 0 {
