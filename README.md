@@ -5,7 +5,9 @@ If you are encountering a bug, please create an issue on this repository.
 ## Installation
 If you can, you should sideload the IPA provided in the releases section in this repository.  
   
-If that doesn't work, you will have to install the app from Xcode. You will need Xcode 12 (currently in beta). Follow the instructions given below to install the app using source.
+If that doesn't work, you will have to install the app from Xcode. You will need Xcode 12 (currently in beta).  
+The `master` branch works with iOS 14 beta 6 and needs Xcode 12 beta 6. If you are using any previous betas, please install from the `older` branch.  
+Follow these instructions to install the app from source.
 1. Clone this repository.
 2. Open the `.xcodeproj` file from the cloned repository.
 3. Click on the topmost parent folder on the left `HomeScreenSpaces` (with a blue `xcodeproj` file icon).
