@@ -6,7 +6,7 @@ If you are encountering a bug, please create an issue on this repository.
 If you can, you should sideload the IPA provided in the releases section in this repository.  
   
 If that doesn't work, you will have to install the app from Xcode. You will need Xcode 12 (currently in beta).  
-The `master` branch works with iOS 14 beta 6 and needs Xcode 12 beta 6. If you are using any previous betas, please install from the `older` branch.  
+The `master` branch work with iOS 14 beta 6 and needs Xcode 12 beta 6. If you are using any previous betas, please install from the `older` branch.  
 Follow these instructions to install the app from source.
 1. Clone this repository.
 2. Open the `.xcodeproj` file from the cloned repository.
@@ -20,7 +20,7 @@ Follow these instructions to install the app from source.
 9. Hit the run button and wait while Xcode installs the app on your device.
 
 ## Demo
-<div align="center">
+<div align=center">
    <a href="https://www.youtube.com/watch?v=QpmxEY4o4Iw"><img src="https://img.youtube.com/vi/QpmxEY4o4Iw/0.jpg" alt="DemoT"></a>
  </div>
 
